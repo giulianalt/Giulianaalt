@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Guida</title>
+    <!-- Link al foglio di stile CSS di Bootstrap -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="socialmedia.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Includi solo jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script per il toggle del menu burger -->
+    <script>
+        $(document).ready(function () {
+            $('.nav-hamburger').click(function () {
+                $(this).toggleClass('open');
+                $('.nav-menu').toggleClass('nav-menu-active');
+                $('.content-container').toggleClass('content-container-active');
+                // Nascondi o mostra gli altri contenuti quando il menu burger è attivo o meno
+                $('.content-container').toggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="container-fluid">
+        <div class="row">
+            <!-- Prima colonna (logo) -->
+            <div class="col-md-4" id="logo">
+                <a href="Homepage.html">
+                    <img src="Images/logotipo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Seconda colonna (emoji) -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="item-img"
+                    src="https://www.studiomistaker.com/wp-content/uploads/2019/10/smile_BITMAP_Y.gif">
+            </div>
+            <div class="col-md-4">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="About%20me.html">About me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contacts.html">Contact</a></li>
+                        <li><a href="Click%20me.html">Click me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-7">
+                    <img class="img-fluid"
+                        src="Images/COLLAGE_social_Tavola%20disegno%201%20copia%205.png" alt="Fanzine">
+                </div>
+                <div class="col-md-5";>
+                    <h1>SOCIAL MEDIA REPORT</h1>
+                    <p>La <b>Bocciofila Vanchiglietta</b> è un luogo storico e di accoglienza semplice in cui trascorrere le
+                        giornate tra bocce, cibo, carte e progetti di autonomia sociale. <br> <br> Il seguente lavoro di report aveva
+                        come obiettivo quello di mettere in risalto i punti di forza di questo storico circolo di Torino, analizzandone
+                        competitor e comparable, per poi arrivare ad una vera e propria nostra "proposta progettuale" <br> <br> Dato
+                        rilevante emerso dal lavoro di ricerca è la mancanza di un'identità visiva che permettesse alla Bocciofila
+                        non solo di essere sempre ricnoscibile, ma anche di aumentare l'engagement del luogo. <br> <br> Il nostro operato
+                        ha preso vita con una nuova identità, ironica ma accattivante, che vede come protagonista una <b>mascotte
+                        </b>che impersonifica la Bocciofila e che riesce ad attrarre sempre più gente a partecipare attivamente a
+                        tutto ciò che il circolo ha da offrire.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animazione del menù burger -->
+    <script>
+        let hamburger = document.querySelector('.nav-hamburger');
+        hamburger.addEventListener("click", function () {
+            document.body.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>

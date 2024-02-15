@@ -1,0 +1,57 @@
+/**
+jquery-backToTop themes
+
+@license MIT
+@author Pablo Pizarro @ppizarror.com
+ */
+
+/**
+-------------------------------------------------------------------------------
+Default theme
+-------------------------------------------------------------------------------
+ */
+.jquery-back-to-top-theme-default {
+    background-color: deeppink !important; /* Cambia il colore di sfondo in giallo */
+    border-radius: 50%; /* Bordo a cerchio */
+    width: 60px; /* Larghezza */
+    height: 60px; /* Altezza */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer; /* Cambia il cursore al passaggio sopra */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.40); /* Aggiunge una leggera ombra all'hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jquery-back-to-top-theme-default:hover {
+    transform: scale(1.1); /* Effetto hover */
+}
+
+.jquery-back-to-top-theme-default::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid white;
+}
+
+
+/**
+-------------------------------------------------------------------------------
+Font-awesome theme
+-------------------------------------------------------------------------------
+ */
+.jquery-back-to-top-theme-fawesome {
+    -moz-border-radius: 25%;
+    -webkit-border-radius: 25%;
+    border-radius: 25%;
+    font-size: 150%;
+}
+
+.jquery-back-to-top-theme-fawesome i {
+    display: inline-block;
+}

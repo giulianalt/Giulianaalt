@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Includi solo jQuery -->
+    <link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="About%20me.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+</head>
+
+
+<body>
+
+        
+   <!-- Header -->
+    <header class="container-fluid">
+        <div class="row">
+            <!-- Prima colonna (logo) -->
+            <div class="col-md-4" id="logo">
+                <a href="Homepage.html">
+                    <img src="Images/logotipo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Seconda colonna (emoji) -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="item-img" src="https://www.studiomistaker.com/wp-content/uploads/2019/10/smile_BITMAP_Y.gif">
+            </div>
+             <div class="col-md-4">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="About%20me.html">About me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contacts.html">Contact</a></li>
+                        <li><a href="Click%20me.html">Click me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+   
+    
+    
+    <!--------------- Contenuto --------------->
+  <div class="content-container">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="img-fluid" id="parallax-image"
+                        src="Images/giuliana.png" alt="La mia foto" class="img-fluid" style="max-width: 65%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div class="content-container">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="content">
+                    <h2><b>Cosa posso dirti di me?</b></h2>
+                    <br>
+                    <p>Mi chiamo <b>Giuliana</b> dal lontano <b>Agosto 1999</b>. Sono una pugliese emigrata a Torino perché tre anni fa ho deciso di frequentare il corso di laurea in Design e Comunicazione visiva al Politecnico. 
+                    <br><br/>
+                    Sin da quando ero bambina ho sempre amato disegnare, colorare e dipingere, infatti mamma mi chiamava "l'<b>artista di casa</b>". Ai tempi delle scuole elementari, avevo persino creato un mio book di tatuaggi così che i miei amici potessero scegliere quello che più gli piaceva e io potessi farglielo con una semplicissima bic.
+                    <br><br>
+                    Mi piace <b>mettermi in gioco</b> e scoprire tutto quello che ancora non conosco.
+                    Sono ansiosa di cogliere sempre ogni opportunità per apprendere nuove competenze, migliorare ciò che già conosco e contribuire con le mie abilità ed esperienze in un ambiente creativo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Toggle del menu burger -->
+    <script>
+       $(document).ready(function(){
+    $('.nav-hamburger').click(function(){
+        $(this).toggleClass('open');
+        $('.nav-menu').toggleClass('nav-menu-active');
+        $('.content-container').toggleClass('content-container-active');
+        
+        // Nascondi gli altri contenuti quando il menu burger è attivo
+        if ($(this).hasClass('open')) {
+            $('.content-container').hide(); // Nascondi solo il contenuto delle immagini dei progetti
+        } else {
+            $('.content-container').show(); // Mostra di nuovo il contenuto quando il menu viene chiuso
+        }
+    });
+});
+
+    </script>
+
+
+
+
+
+        
+        
+       <script> 
+        let hamburger= document.querySelector('.nav-hamburger');
+            hamburger.addEventListener("click", function () {
+                document.body.classList.toggle('open');
+                });
+        </script>
+      
+   
+</body>  
+</html>
+

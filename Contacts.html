@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Contacts.css">
+    
+    <!-- collegamento icone contatti -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+    
+<body>
+  
+ <!-- Header -->
+    <header class="container-fluid">
+        <div class="row">
+            <!-- Prima colonna (logo) -->
+            <div class="col-md-4" id="logo">
+                <a href="Homepage.html">
+                    <img src="Images/logotipo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Seconda colonna (emoji) -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="item-img" src="https://www.studiomistaker.com/wp-content/uploads/2019/10/smile_BITMAP_Y.gif">
+            </div>
+             <div class="col-md-4">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="About%20me.html">About me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contacts.html">Contact</a></li>
+                        <li><a href="Click%20me.html">Click me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>  
+    
+    <!-- Contenitore del contenuto della pagina -->
+    <div class="content-container">
+        <div class="container mt-5">
+            <div class="row">
+               
+            <!-- Prima colonna: social -->
+            <div class="col-md-6">
+                <div class="contact-info text-center">
+                    <h2><b>Instagram</b></h2>
+                    <a href="https://www.instagram.com/giulianaltieri/"><i class="fab fa-instagram"></i> giulianalt</a>
+
+
+                    <h2><b>E-mail</b></h2>
+                    <a href="mailto:giulianaltieri99@gmail.com"><i class="far fa-envelope"></i> Giulianaltieri</a>
+
+
+                    <h2><b>LinkedIn</b></h2>
+                    <a href="https://www.linkedin.com/in/giuliana-altieri-438944179/"><i class="fab fa-linkedin"></i> Giuliana Altieri</a>
+
+                </div>
+            </div>
+
+                <!-- Seconda colonna: mappa -->
+                <div class="col-md-6">
+    
+                    
+                    <div class="map-container">
+                        <!-- iFrame per la mappa -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.808715703696!2d7.646870576558838!3d45.06939127107021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886ce30b5c9f91%3A0x820da9529febabdb!2sVia%20Moretta%2C%2049%2C%2010139%20Torino%20TO!5e0!3m2!1sit!2sit!4v1707766194941!5m2!1sit!2sit" width="700" height="460" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Animazione del menù burger --> 
+   <script> 
+        let hamburger= document.querySelector('.nav-hamburger');
+            hamburger.addEventListener("click", function () {
+                document.body.classList.toggle('open');
+                });
+        </script> 
+   
+    <!-- Toggle del menu burger -->
+    <script>
+       $(document).ready(function(){
+    $('.nav-hamburger').click(function(){
+        $(this).toggleClass('open');
+        $('.nav-menu').toggleClass('nav-menu-active');
+        $('.content-container').toggleClass('content-container-active');
+        
+        // Nascondi gli altri contenuti quando il menu burger è attivo
+        if ($(this).hasClass('open')) {
+            $('.content-container').hide(); // Nascondi solo il contenuto delle immagini dei progetti
+        } else {
+            $('.content-container').show(); // Mostra di nuovo il contenuto quando il menu viene chiuso
+        }
+    });
+});
+    </script>
+    
+</body>
+
+</html>
+
+
+

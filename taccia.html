@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Guida</title>
+    <!-- Link al foglio di stile CSS di Bootstrap -->
+    
+    <link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="taccia.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Includi solo jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script per il toggle del menu burger -->
+    <script>
+        $(document).ready(function() {
+            $('.nav-hamburger').click(function() {
+                $(this).toggleClass('open');
+                $('.nav-menu').toggleClass('nav-menu-active');
+                $('.content-container').toggleClass('content-container-active');
+                // Nascondi o mostra gli altri contenuti quando il menu burger è attivo o meno
+                $('.content-container').toggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="container-fluid">
+        <div class="row">
+            <!-- Prima colonna (logo) -->
+            <div class="col-md-4" id="logo">
+                <a href="Homepage.html">
+                    <img src="Images/logotipo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Seconda colonna (emoji) -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="item-img" src="https://www.studiomistaker.com/wp-content/uploads/2019/10/smile_BITMAP_Y.gif">
+            </div>
+             <div class="col-md-4">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="About%20me.html">About me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contacts.html">Contact</a></li>
+                        <li><a href="Click%20me.html">Click me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+     
+<!-- Contenitore per le immagini -->
+ <div class="content-container">
+        <div class="posters">
+            <!-- Inserisci i tuoi poster qui -->
+            <div class="poster"><img src="Images/alessia%201.jpg" alt="Poster 1"></div>
+            <div class="poster"><img src="Images/alessia%202.jpg" alt="Poster 2"></div>
+            <div class="poster"><img src="Images/alessia%203.jpg" alt="Poster 3"></div>
+            <div class="poster"><img src="Images/alessia%204.jpg" alt="Poster 4"></div>
+            <div class="poster"><img src="Images/alessia%205.jpg" alt="Poster 5"></div>
+            <div class="poster"><img src="Images/alessia%207.jpg" alt="Poster 6"></div>
+            <div class="poster"><img src="Images/alessia%208.jpg" alt="Poster 7"></div>
+            <div class="poster"><img src="Images/alessia%209.jpg" alt="Poster 8"></div>
+            <div class="poster"><img src="Images/alessia%2011.jpg" alt="Poster 9"></div>
+            <div class="poster"><img src="Images/alessia%2012.jpg" alt="Poster 10"></div>
+            <div class="poster"><img src="Images/alessia%2013.jpg" alt="Poster 11"></div>
+            <div class="poster"><img src="Images/alessia%2014.jpg" alt="Poster 12"></div>
+            <div class="poster"><img src="Images/alessia%2015.jpeg" alt="Poster 13"></div>
+            <!-- Aggiungi altri poster secondo necessità -->
+        </div>
+    </div> 
+    
+     <div class="content-container">
+         <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-7">
+            <img class="img-fluid" src="Images/taccia_collage_Tavola%20disegno%201%20copia.jpg" alt="Fanzine">
+        </div>
+        <div class="col-md-5">
+            <h1>LAMPADA TACCIA <br> DEI FRATELLI CASTIGLIONI</h1>
+        <br>
+                <p> Questo progetto celebra la <b>Lampada Taccia,</b> un'icona creata dei fratelli <b>Pier Giacomo </b> e <b> Achille Castiglioni. <br> </b> 
+                La Taccia è più di una semplice lampada: è un simbolo di successo e raffinatezza, paragonata dallo stesso Achille Castiglioni alla "Mercedes delle lampade", grazie alla sua silhouette che ricorda le <b>classiche colonne greche</b> .
+                <br>  
+                <br>
+                Il progetto ha preso vita attraverso un'analisi approfondita della lampada, esaminando ogni suo aspetto tecnico e stilistico.
+                <br> Ci si è poi posti l'obiettivo di raccontare la sua storia in modo originale ed evocativo, immergendo la lampada nel contesto suggestivo della Valle dei Templi di Agrigento. <br> <br>
+
+                In questo scenario maestoso, la lampada ha assunto una <b>nuova identità visiva</b> , mettendo in risalto il suo passato e sottolineando la <b>qualità</b>  e l'<b>eleganza</b>  che la contraddistinguono.
+                <br> <br> <br> <br>
+            
+                </p>
+          </div>
+        </div>
+    </div>
+</div> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <!-- Animazione del menù burger -->
+   <script> 
+        let hamburger= document.querySelector('.nav-hamburger');
+            hamburger.addEventListener("click", function () {
+                document.body.classList.toggle('open');
+                });
+        </script>    
+    
+    
+</body>
+</html>
+

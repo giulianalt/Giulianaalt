@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Guida</title>
+    <!-- Link al foglio di stile CSS di Bootstrap -->
+    
+    <link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="Fanzine.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Includi solo jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script per il toggle del menu burger -->
+    <script>
+        $(document).ready(function() {
+            $('.nav-hamburger').click(function() {
+                $(this).toggleClass('open');
+                $('.nav-menu').toggleClass('nav-menu-active');
+                $('.content-container').toggleClass('content-container-active');
+                // Nascondi o mostra gli altri contenuti quando il menu burger è attivo o meno
+                $('.content-container').toggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="container-fluid">
+        <div class="row">
+            <!-- Prima colonna (logo) -->
+            <div class="col-md-4" id="logo">
+                <a href="Homepage.html">
+                    <img src="Images/logotipo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Seconda colonna (emoji) -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="item-img" src="https://www.studiomistaker.com/wp-content/uploads/2019/10/smile_BITMAP_Y.gif">
+            </div>
+             <div class="col-md-4">
+                <div class="nav-hamburger ">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="About%20me.html">About me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contacts.html">Contact</a></li>
+                        <li><a href="Click%20me.html">Click me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ <div class="content-container">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7">
+                <img class="img-fluid" src="Images/fanzine%20layout_Tavola%20disegno%201.png" alt="Fanzine">
+            </div>
+            <div class="col-md-5">
+                <h1>LESS IS MORE,</h1>
+                <h1>MA A COLORI</h1>
+                <p>Il concetto del <b>"Less is more" </b> ha capovolto l'idea iniziale di abbondanza e complessità apparente di un progetto, definendo che, in realtà, la regola base è riconoscere la vera essenza delle cose e riuscire a comunicarle nella loro semplicità. Togliere invece che aggiungere. Perché per aggiungere qualità, a volte, occorre saper sottrarre quantità! </p>
+                <p>Queste <b>48 pagine</b> di fanzine sono una raccolta di progetti di designer e artisti, sia italiani che stranieri, che nel corso degli anni hanno contribuito a creare quello che oggi è lo stile che mi contraddistingue dalla massa.</p> <br>
+                <p>Per rispecchiare il concetto su cui si è basato l'intero lavoro, ho deciso di ricreare uno stile "a cornice" che rimanesse fisso in tutte le pagine: così, quando il lettore lo sfoglia, percepisce il senso di stabilità che questo conferisce.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   <!-- Animazione del menù burger -->
+   <script> 
+        let hamburger= document.querySelector('.nav-hamburger');
+            hamburger.addEventListener("click", function () {
+                document.body.classList.toggle('open');
+                });
+        </script>     
+    
+    
+</body>
+</html>
+
+

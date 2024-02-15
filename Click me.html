@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click me</title>
+    
+    <link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="Click%20me.css">
+    
+    <!-- Link al foglio di stile CSS di Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Includi solo jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+</head>
+
+    
+<body onload="animateText()">
+    <!-- Header -->
+    <header class="container-fluid">
+        <div class="row">
+            <!-- Prima colonna (logo) -->
+            <div class="col-md-4" id="logo">
+                <a href="Homepage.html">
+                    <img src="Images/logotipo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Seconda colonna (emoji) -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="item-img" src="https://www.studiomistaker.com/wp-content/uploads/2019/10/smile_BITMAP_Y.gif">
+            </div>
+             <div class="col-md-4">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="About%20me.html">About me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contacts.html">Contact</a></li>
+                        <li><a href="Click%20me.html">Click me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+  <div class="content-container">
+        <h1 id="title">Scopriamo se sei il mio typo</h1>
+        <div id="photo-container">
+            <img src="Images/font.png" alt="Photo" id="photo" onclick="generateTypo()">
+            <p id="generated-typo"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+   <!-- Toggle del menu burger -->
+    <script>
+        $(document).ready(function() {
+            $('.nav-hamburger').click(function() {
+                $(this).toggleClass('open');
+                $('.nav-menu').toggleClass('nav-menu-active');
+                $('.content-container').toggleClass('content-container-active');
+                // Nascondi o mostra gli altri contenuti quando il menu burger è attivo o meno
+                $('.content-container').toggle();
+            });
+        });
+    </script>  
+    
+ <!-- Animazione del menù burger -->
+   <script> 
+        let hamburger= document.querySelector('.nav-hamburger');
+            hamburger.addEventListener("click", function () {
+                document.body.classList.toggle('open');
+                });
+        </script>  
+ 
+    <!-------- Animazione GENERATORE DI FRASI----------->
+    <script>
+    const typoPhrases = [
+    "Sei la mia fantasia tipografica!",
+    "Sei la mia lettera mancante!",
+    "Sei la mia parola preferita!",
+    "Sei il mio carattere speciale!",
+    "Sei il mio typo perfetto!",
+    "Tu sei l'eleganza in Helvetica!",
+    "Con te tutto è più bello!",
+    "Sei la dolcezza in Courier New!",
+    "La tua presenza illumina come Georgia!",
+    "Sei la perfezione in Arial!"
+];
+
+const fonts = [
+    "Arial",
+    "Helvetica",
+    "Times New Roman",
+    "Courier New",
+    "Georgia",
+    "Verdana",
+    "Impact",
+    "Comic Sans MS",
+    "Trebuchet MS",
+    "Bookman Old Style"
+];
+
+
+    function generateTypo() {
+        const randomIndex = Math.floor(Math.random() * typoPhrases.length);
+        const generatedTypo = typoPhrases[randomIndex];
+        const randomFont = fonts[Math.floor(Math.random() * fonts.length)]; // Seleziona casualmente un font
+        const generatedTypoElement = document.getElementById('generated-typo');
+        generatedTypoElement.innerHTML = generatedTypo;
+        generatedTypoElement.style.fontFamily = randomFont; // Imposta il font della frase generata
+
+        // Aggiungi classe 'fadeInText' per attivare l'animazione
+        generatedTypoElement.classList.add('fadeInText');
+    }
+
+    // Aggiungi un listener per rimuovere la classe 'fadeInText' quando l'animazione è completa
+    document.getElementById('generated-typo').addEventListener('animationend', function() {
+        this.classList.remove('fadeInText');
+    });
+</script>
+
+    
+    
+  
+ 
+    
+</body>
+</html>
+

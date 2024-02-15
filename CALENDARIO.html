@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto Guida</title>
+    
+    
+    <link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="CALENDARIO.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Includi solo jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Script per il toggle del menu burger -->
+    <script>
+        $(document).ready(function() {
+            $('.nav-hamburger').click(function() {
+                $(this).toggleClass('open');
+                $('.nav-menu').toggleClass('nav-menu-active');
+                $('.content-container').toggleClass('content-container-active');
+                // Nascondi o mostra gli altri contenuti quando il menu burger è attivo o meno
+                $('.content-container').toggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!------------------- Header ------------------->
+    <header class="container-fluid">
+        <div class="row">
+            <!-- Prima colonna (logo) -->
+            <div class="col-md-4" id="logo">
+                <a href="Homepage.html">
+                    <img src="Images/logotipo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Seconda colonna (emoji) -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="item-img" src="https://www.studiomistaker.com/wp-content/uploads/2019/10/smile_BITMAP_Y.gif">
+            </div>
+             <div class="col-md-4">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="About%20me.html">About me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contacts.html">Contact</a></li>
+                        <li><a href="Click%20me.html">Click me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <div class="content-container">
+        <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-7">
+            <img class="img-fluid" src="Images/collage_calendar_Tavola%20disegno%201%20copia%208.png" alt="Fanzine">
+        </div>
+        <div class="col-md-5">
+            <h1>CALENDARIO GREGORIANO</h1>
+        <br>
+        <p> La vita è fatta di <b>attimi</b>, non di minuti. <br><br> Questo progetto, un calendario gregoriano, va oltre la sua funzionalità. <br>Ispirato da Salvador Dalì e il concetto di tempo nella sua opera "<b>La persistenza della memoria</b>", il calendario riflette sul nostro rapporto con il tempo attraverso orologi molli che segnano ognuno un’ora diversa scivolando languidamente e adattandosi alle superfici dure.<br><br> Prendendo forma dall'albero<b> Pinus longaeva matusalemme</b>, simbolo di longevità, ci ricorda che il tempo è relativo e che ogni giorno può essere il momento giusto per agire.<br><br><br>
+        È un invito a vivere pienamente, senza aspettare il momento perfetto che forse non arriverà mai.
+            <br> <br> <br> <br>
+</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Animazione del menù burger -->
+   <script> 
+        let hamburger= document.querySelector('.nav-hamburger');
+            hamburger.addEventListener("click", function () {
+                document.body.classList.toggle('open');
+                });
+        </script>     
+    
+    
+</body>
+</html>

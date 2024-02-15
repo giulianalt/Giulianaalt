@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+    
+<link rel="stylesheet" href="styles.css"> 
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+   <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Myriad+Variable+Concept:wght@400;700&display=swap">
+
+</head>
+
+    
+<body>
+  
+    <!-- Header -->
+    <header class="container-fluid">
+        <div class="row">
+            <!-- Prima colonna (logo) -->
+            <div class="col-md-4" id="logo">
+                <a href="Homepage.html">
+                    <img src="Images/logotipo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Seconda colonna (emoji) -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="item-img" src="https://www.studiomistaker.com/wp-content/uploads/2019/10/smile_BITMAP_Y.gif">
+            </div>
+             <div class="col-md-4">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="About%20me.html">About me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contacts.html">Contact</a></li>
+                        <li><a href="Click%20me.html">Click me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="container-fluid">
+  <div class="row">
+      <!-- 2 colonna -->
+     <div class="col-md-12">    
+        <div class="logo-center">
+        <img src="Images/logo1.png" alt="Logo al centro">
+      </div>
+       
+        
+        <div class="rettangolo">
+            <div class="overlay-text" style="display: none;">Benvenuti nel mio mondo!</div>    
+        </div>
+     </div>
+    </div>
+   </div>  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+   <!------ Apertura/chiusra del menù ---------> 
+      <script> 
+        let hamburger= document.querySelector('.nav-hamburger');
+            hamburger.addEventListener("click", function () {
+                document.body.classList.toggle('open');
+                });
+        </script>
+      
+      <script>
+       $(document).ready(function(){
+  $(window).on('wheel', function(event) {
+    if (event.originalEvent.deltaY > 0) {
+      // Scorri verso il basso
+      $('.overlay-text').fadeIn('slow', function() {
+        // Aggiungi la classe per avviare l'animazione solo quando il testo è visibile
+        $(this).addClass('pulsate');
+      });
+    } else {
+      // Scorri verso l'alto
+      $('.overlay-text').removeClass('pulsate').fadeOut('slow');
+    }
+  });
+});
+
+</script>
+      
+      
+ <!----- Apertura delle voci del menù quando cliccato ------>
+ <script>
+  $(document).ready(function(){
+    $('.nav-hamburger').click(function(){
+      $('.nav-menu').toggle();
+    });
+  });
+</script>
+    
+   <!-- Dissolvenza del logo a seconda dello scrolling --> 
+  <script>
+$(document).ready(function(){
+  let logoVisible = true;
+  
+  $(window).on('wheel', function(event) {
+    if (event.originalEvent.deltaY > 0) {
+      // Scorri verso l'alto
+      if (logoVisible) {
+        // Se il logo è ancora visibile, lo facciamo scomparire
+        $('.logo-center').animate({ opacity: 0, marginLeft: '50px' }, 'slow', function() {
+          // Dopo che il logo è scomparso, facciamo apparire la scritta
+          $('.overlay-text').fadeIn('slow');
+          logoVisible = false;
+        });
+      } else {
+        // Se il logo è già scomparso, facciamo apparire la scritta direttamente
+        $('.overlay-text').fadeIn('slow');
+      }
+    } else {
+      // Scorri verso il basso
+      if (!logoVisible) {
+        // Se il logo non è visibile, lo facciamo riapparire
+        $('.logo-center').animate({ opacity: 1, marginLeft: '0' }, 'slow');
+        $('.overlay-text').fadeOut(200); // Impostiamo una durata più breve per la dissolvenza
+        logoVisible = true;
+      }
+    }
+  });
+});
+</script>
+
+    <!----- Comparsa del testo a seconda dello scrolling ---->
+    <script>
+    $(document).ready(function(){
+  $('.nav-hamburger').click(function(){
+    $(this).toggleClass('open');
+    $('.rettangolo').toggleClass('overlay-content-active');
+    $('.overlay-text').toggleClass('overlay-content-active');
+    $('.nav-menu').toggleClass('nav-menu-active');
+  });
+});
+    </script>
+
+    <script>
+$(document).ready(function(){
+  $('.nav-hamburger').click(function(){
+    $(this).toggleClass('open');
+    $('.logo-center').toggleClass('menu-open');
+  });
+});
+
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>
+
+  
+    

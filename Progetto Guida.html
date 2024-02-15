@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Includi solo jQuery -->
+    
+    <link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="Progetto%20Guida.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Inserisci il codice JavaScript per gestire il toggle del menu burger -->
+    <script>
+       $(document).ready(function(){
+    $('.nav-hamburger').click(function(){
+        $(this).toggleClass('open');
+        $('.nav-menu').toggleClass('nav-menu-active');
+        $('.content-container').toggleClass('content-container-active');
+        
+        // Nascondi gli altri contenuti quando il menu burger è attivo
+        if ($(this).hasClass('open')) {
+            $('.content-container').hide(); // Nascondi solo il contenuto delle immagini dei progetti
+        } else {
+            $('.content-container').show(); // Mostra di nuovo il contenuto quando il menu viene chiuso
+        }
+    });
+});
+    </script>
+  
+
+</head>
+<body>
+    
+    <!--------------------- Header --------------------------->
+    <header class="container-fluid">
+        <div class="row">
+            <!-- Prima colonna (logo) -->
+            <div class="col-md-4" id="logo">
+                <a href="Homepage.html">
+                    <img src="Images/logotipo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <!-- Seconda colonna (emoji) -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img class="item-img" src="https://www.studiomistaker.com/wp-content/uploads/2019/10/smile_BITMAP_Y.gif">
+            </div>
+             <div class="col-md-4">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="About%20me.html">About me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a href="Contacts.html">Contact</a></li>
+                        <li><a href="Click%20me.html">Click me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header> 
+
+  
+<!-- Contenitore per le immagini -->
+ <div class="content-container">
+        <div class="posters">
+            <!-- Inserisci i tuoi poster qui -->
+            <div class="poster"><img src="Images/torino%20foto-23.png" alt="Poster 1"></div>
+            <div class="poster"><img src="Images/torino%20foto-24.png" alt="Poster 2"></div>
+            <div class="poster"><img src="Images/torino-25.jpg" alt="Poster 3"></div>
+            <div class="poster"><img src="Images/torino-26.jpg" alt="Poster 4"></div>
+            <div class="poster"><img src="Images/torino-27.jpg" alt="Poster 5"></div>
+            <div class="poster"><img src="Images/torino-28.jpg" alt="Poster 6"></div>
+            <div class="poster"><img src="Images/torino-29.jpg" alt="Poster 7"></div>
+            <div class="poster"><img src="Images/torino-30.jpg" alt="Poster 8"></div>
+            <div class="poster"><img src="Images/torino-31.jpg" alt="Poster 9"></div>
+            <div class="poster"><img src="Images/torino-32.jpg" alt="Poster 10"></div>
+            <div class="poster"><img src="Images/torino-33.jpg" alt="Poster 11"></div>
+            <div class="poster"><img src="Images/torino-34.jpg" alt="Poster 12"></div>
+            <div class="poster"><img src="Images/torino-35.jpg" alt="Poster 13"></div>
+            <!-- Aggiungi altri poster secondo necessità -->
+        </div>
+    </div>
+    
+    
+    <div class="content-container">
+        <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-7">
+            <img class="img-fluid" src="Images/COPERTINA%20GUIDA_Tavola%20disegno%201%20copia%209.png" alt="Fanzine">
+        </div>
+        <div class="col-md-5">
+            <h1>TORINO è POESIA</h1>
+        <br>
+                <p> <b>TORINO è POESIA</b> è la nuova campagna di comunicazione comunale realizzata per la comune di Torino, ispirata ai versi iconici della <b>poesia italiana</b>.<br> Questi versi sono stati scelti poiché radicati nel nostro bagaglio culturale e facilmente riconoscibili, specialmente quando appaiono in contesti inaspettati. <br><br>
+    
+Il <b>claim</b> è diviso in due parti: la prima presenta il verso poetico originale, mentre la seconda parte è una rivisitazione adattata alla comunicazione specifica. Questa suddivisione viene riflessa anche nella rappresentazione grafica, con l'uso di due colori distinti che corrispondono alle due parti del claim.
+                  <br><br>
+                
+
+Le varie comunicazioni si distinguono in base alla loro categoria: avvisi, servizi, eventi e sensibilizzazione. Ciascuna categoria è caratterizzata da una combinazione di tre colori distinti.
+<br><br>
+
+
+</p>
+        </div>
+       </div>
+    </div>
+</div> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ <!-- Animazione del menù burger -->
+   <script> 
+        let hamburger= document.querySelector('.nav-hamburger');
+            hamburger.addEventListener("click", function () {
+                document.body.classList.toggle('open');
+                });
+        </script>    
+    
+    
+</body>
+</html>
+
+
+
+
